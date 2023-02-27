@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Aritzia page</title>
+<meta charset="UTF-8" />
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="style.css">
+
+
+
+
+</head>
+	<body>
+		<header>
+			<nav>
+					<div class="logo">
+							<a href="index.html">
+									<img src="1280px-Aritzia_logo_(2017).svg.png" alt="Aritzia">
+							</a>
+					</div>
+					<ul class="main-nav">
+							<li class="main-nav-li"><a href="/en/women">Women</a></li>
+							<li class="main-nav-li"><a href="/en/men">Men</a></li>
+							<li class="main-nav-li"><a href="/en/new-arrivals">New Arrivals</a></li>
+							<li class="main-nav-li"><a href="/en/sale">Sale</a></li>
+							<li class="main-nav-li"><a href="/en/store-locations">Store Locations</a></li>
+							<li class="main-nav-li"><a href="Outfit-for-me.html">Map For You</a></li>
+					</ul>
+				
+			</nav>
+	</header>
+
+	<div class="header-section">
+		<h1 class="main-header" style="font-family: 'Open Sans', sans-serif; font-size: 36px; font-weight: 700;">MapForYou: A Personalized Outfits Feature For Wherever You Go</h1>
+		<p class="sub-header" style="font-family: 'Open Sans', sans-serif; font-size: 18px; font-weight: 400;">Aritizia's NEW personalization feature that 
+			helps you say fashionable whether they are going for a workout at the gym or attending a fancy cocktail party tonight. Whatever it is, we've got 
+			you covered!</p>
+	</div>
+
+
+	<form id="search-form" action="search-results.html">
+		<div class="parent-container"> 
+			<div class="search-container">
+				
+				<form>
+						<input type="search" id="search" placeholder="Search For Your Location Here">
+						<button type="submit"></button>
+				</form>
+			</div>
+		</div>
+	</form>
+
+	<script>
+		var searchForm = document.getElementById("search-form");
+
+		searchForm.addEventListener("submit", function(event) {
+				event.preventDefault();
+				var searchTerm = document.getElementById("search").value;
+				window.location.href = searchTerm + ".html";
+		});
+	</script>
+
+<title>Simple Map</title>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+<script type="module" src="./index.js"></script>
+
+<meta name="viewport" content="initial-scale=1.0">
+<meta charset="utf-8">
+<style>
+/* Always set the map height explicitly to define the size of the div
+* element that contains the map. */
+#map {
+height: 100%;
+}
+/* Optional: Makes the sample page fill the window. */
+html, body {
+height: 100%;
+margin: 0;
+padding: 0;
+}
+</style>
+</head>
+<body>
+<div id="map"></div>
+<script>
+var map;
+function initMap() {
+const ubc = { lat: 49.2606, lng: -123.2460 };
+const stanleypark = {lat: 49.3043 , lng: -123.1443};
+const kistilanobeach = {lat: 49.2754 , lng: -123.1535};
+const earls = {lat: 49.2758, lng:-123.1206 };
+map = new google.maps.Map(document.getElementById('map'), {
+	center: {lat: 49.2684, lng: -123.1683},
+	zoom: 13
+
+	
+})
+const marker1 = new google.maps.Marker({
+		position: ubc,
+		map: map,
+	})
+	const marker2 = new google.maps.Marker({
+		position: stanleypark,
+		map: map,
+	})
+	const marker3 = new google.maps.Marker({
+		position: kistilanobeach,
+		map: map,
+	})
+	const marker4 = new google.maps.Marker({
+		position: earls,
+		map: map,
+	})
+	;
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYB7oUkhLrsezb3yL9X9jezGwUXH1g_bs&callback=initMap"
+async defer></script>
+
+	
+<div class="near-you-section">
+	<h1 class="recommendation-header" style="font-family: 'Open Sans', sans-serif; font-size: 36px; font-weight: 700;"> Check out these places near you! </h1>
+	<div class="container">
+		<div class="row">
+			<div class="col-6 col-md-3"> <a href="Earls.html"></a>
+				<div class="clothing-preview">
+					<img src="Earls.png" alt="Clothing 1">
+					<p ><a style ="color:white" href="Earls.html">Earls Kitchen and Bar</a></p>
+				</div>
+			</div>
+			<div class="col-6 col-md-3">
+				<div class="clothing-preview">
+					<img src="Eatery.jpeg" alt="Clothing 2">
+					<p><a style ="color:white" href="/en/the-eatery">The Eatery</a></p>
+				</div>
+			</div>
+			<div class="col-6 col-md-3">
+				<div class="clothing-preview">
+					<img src="kits-beach.jpeg" alt="Clothing 3">
+					<p><a style ="color:white" href="/en/kitsilano-beach">Kitsilano Beach</a></p>
+				</div>
+			</div>
+			<div class="col-6 col-md-3">
+				<div class="clothing-preview">
+					<img src="Stanley-park.jpeg" alt="Clothing 4">
+					<p><a style ="color:white" href="/en/stanley-park">Stanley Park</a></p>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-6 col-md-3"> <a href="Earls.html"></a>
+					<div class="clothing-preview">
+						<img src="Grouse.jpeg" alt="Clothing 1">
+						<p ><a style ="color:white" href="/en/grouse">Grouse Mountain</a></p>
+					</div>
+				</div>
+				<div class="col-6 col-md-3">
+					<div class="clothing-preview">
+						<img src="49th Parallel.png" alt="Clothing 2">
+						<p><a style ="color:white" href="/en/forty-ninth-parallel"> 49th Parallel Cafe</a></p>
+					</div>
+				</div>
+				<div class="col-6 col-md-3">
+					<div class="clothing-preview">
+						<img src="Granville.jpeg" alt="Clothing 3">
+						<p><a style ="color:white" href="/en/granville-island">Granville Island Public Market</a></p>
+					</div>
+				</div>
+				<div class="col-6 col-md-3">
+					<div class="clothing-preview">
+						<img src="Shameful-tiki.jpg" alt="Clothing 4">
+						<p><a style ="color:white" href="/en/shameful-tiki-room">The Shameful Tiki Room</a></p>
+					</div>
+				</div>
+		</div>
+		<hr>
+
+</div>
+
+	
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4 col-md-4 col-sm-12">
+					<h4>Aritzia</h4>
+					<p>About Us</p>
+					<p>Size Guide</p>
+					<p>Returns & Exchanges</p>
+					<p>Send Us Feedback</p>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-12">
+					<h4>Follow Us</h4>
+					<a href="https://www.instagram.com/aritzia/">Instagram</a>
+					<a href="https://www.pinterest.com/aritzia/">Pinterest</a>
+					<a href="https://www.twitter.com/aritzia/">Twitter</a>
+					<a href="https://www.facebook.com/aritzia/">Facebook</a>
+					<a href="https://www.youtube.com/aritzia/">YouTube</a>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-12">
+					<h4>Join our mailing list</h4>
+					<form>
+						<input type="email" placeholder="Enter your email">
+						<button type="submit">Sign Up</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+
+
+
+
+
+
+		<script src="src/index.js"></script>
+	</body>
+</html>
